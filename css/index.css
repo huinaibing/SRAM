@@ -1,0 +1,365 @@
+body,
+html{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.zerolb{
+  /* border: 2px solid red !important;
+  border-right: 0px !important;
+  border-top: 0px !important; */
+  border-color: red !important;
+}
+.onelb{
+  /* border: 2px solid rgb(0, 255, 0) !important;
+  border-right: 0px !important;
+  border-top: 0px !important; */
+  border-color: rgb(0, 255, 0) !important;
+}
+.zerotr{
+  border: 2px solid red !important;
+  border-left: 0px !important;
+  border-bottom: 0px !important;
+}
+.onetr{
+  border: 2px solid rgb(0, 255, 0) !important;
+  border-left: 0px !important;
+  border-bottom: 0px !important;
+}
+.bgDot{
+  width: 2px;
+  height: 2px;
+  background-color: #ccc;
+}
+.header{
+  width: 100%;
+  height: 70px;
+  background-color: skyblue;
+  line-height: 70px;
+  padding-left: 30px;
+  color: aliceblue;
+  font-weight: 700;
+  font-size: large;
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.basicGate{
+  width: 50px;
+  height: 40px;
+  line-height: 32px;
+  text-align: center;
+  font-weight: 700;
+  position: absolute;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.xorList{
+  position: relative;
+}
+.xor{
+  border: 4px solid blue;
+}
+.and{
+  border: 4px solid blue;
+  /* border-radius: 0 20px 20px 0; */
+}
+.or{
+  border: 4px solid blue;
+  /* border-radius: 0 60% 60% 0; */
+}
+li {
+  position: absolute;
+}
+.inputA li,
+.inputB li,
+.xorOut li{
+  border: 3px solid black;
+  border-top: 0px;
+  border-right: 0px;
+}
+.xorOut li{
+  border: 3px solid black;
+  border-top: 0px;
+  border-right: 0px;
+}
+/* .xorOut li:nth-child(3n-1){
+  border-left: 0px;
+}
+.xorOut li:nth-child(3n){
+  border: 3px solid black;
+  border-bottom: 0px;
+  border-left: 0px;
+  padding-top: 180px;
+  padding-left: 80px;
+}
+.xorOut li:nth-child(n+13){
+  width: 10px;
+  height: 10px;
+  border-right: 0px;
+  border-left: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+} */
+.andOut li{
+  border: 3px solid black;
+  border-bottom: 0px;
+  border-left: 0px;
+}
+
+/* .andOut>li:nth-child(4n+1){
+  border: 3px solid black;
+  border-bottom: 0px;
+  border-left: 0px;
+}
+.andOut>li:nth-child(4n+2),
+.andOut>li:nth-child(4n){
+  border: 3px solid black;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+.andOut>li:nth-child(4n+3){
+  border: 3px solid black;
+  border-top: 0px;
+  border-left: 0px;
+} */
+/*****翻转几根线***************/
+.andOutLT li{
+  border: 3px solid black;
+  border-top: 0px;
+  border-left: 0px;
+}
+
+/*******end 翻转*******************/
+
+
+
+/* 中间进位C1、C2、C3 */
+.c0 {
+  border: 3px solid black;
+  border-bottom: 0px;
+  border-left: 0px;
+}
+.c1 {
+  border: 3px solid black;
+  border-bottom: 0px;
+  border-left: 0px;
+}
+.c2 {
+  border: 3px solid black;
+  border-bottom: 0px;
+  border-left: 0px;
+}
+.c3 {
+  border: 3px solid black;
+  border-bottom: 0px;
+  border-left: 0px;
+}
+.c4 {
+  border: 3px solid black;
+  border-bottom: 0px;
+  border-left: 0px;
+}
+/* .carry>li:nth-child(4),
+.carry>li:nth-child(7),
+.carry>li:nth-child(10){
+  width: 100px;
+  height: 100px;
+  border: 3px solid black;
+  border-top: 0px;
+  border-left: 0px;
+  padding-left: 80px;
+  padding-top: 50px;
+}
+.carry>li:nth-child(5),
+.carry>li:nth-child(8),
+.carry>li:nth-child(11),
+.carry>li:nth-child(6),
+.carry>li:nth-child(9),
+.carry>li:nth-child(12){
+  height: 100px;
+  width: 100px;
+  border: 3px solid black;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+}
+/* 进位C0和C4单独在这里设置 */
+/* .carry>li:nth-child(1){
+  width: 100px;
+  height: 100px;
+  border: 3px solid #000;
+  top: 330px;
+  left: 200px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+}
+.carry>li:nth-child(2){
+  width: 50px;
+  height: 70px;
+  border: 3px solid #000;
+  top: 330px;
+  left: 300px;
+  border-right: 0px;
+}
+.carry>li:nth-child(13){
+  width: 100px;
+  height: 100px;
+  border: 3px solid #000;
+  top:420px;
+  left: 1280px;
+  padding-left: 100px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+} */ */
+/* 导线连接处小圆点 */
+.dot{
+  width: 4px;
+  height: 4px;
+  border: 4px solid black;
+  border-radius: 4px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+.dot1{
+  width: 4px;
+  height: 4px;
+  border: 4px solid black;
+  border-radius: 4px;
+  position: absolute;
+  top: 5px;
+  left: -4px;
+}
+/* 占位元素不显示 */
+.placeholder{
+  display: none;
+}
+
+/* 控制台 */
+.console{
+  width: 300px;
+  height: 130px;
+  background-color: skyblue;
+  box-shadow: 2px -2px 10px 2px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 0px;
+  color: aliceblue;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.operand1{
+  margin-bottom: 10px;
+}
+.console input{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 7px;
+}
+.result{
+  width: 180px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  top: 90px;
+  /* left: 320px; */
+}
+.result>div{
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  right: 0px;
+  top: 0px;
+  /* text-align: center; */
+  padding-left: 5px;
+  background-color: rgb(0,255,0);
+  border-radius: 5px;
+  color: aliceblue;
+}
+.run,
+.reset{
+  width: 70px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  left: 220px;
+  top: 10px;
+  background-color: orange;
+  cursor: pointer;
+  font-weight: 700;
+}
+.reset{
+  top: 70px;
+}
+/* tip信息提示框 */
+.tip {
+  width: 400px;
+  padding: 50px 20px;
+  text-align: center;
+  position: fixed;
+  top: -35%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #00C9FF, #92FE9D);
+  font-size: 20px;
+  color: aliceblue;
+  z-index: 999;
+  /* display: none; */
+}
+
+.error{
+  background-color: #e74c3c;
+}
+
+/* 图例 */
+.legend{
+  width: 100px;
+  height: 90px;
+  padding: 0 10px;
+  background-color: rgba(255, 166, 0, 0.601);
+  position: fixed;
+  top: 90px;
+  right: 30px;
+  border-radius: 5px;
+}
+.legend>div:nth-child(1),
+.legend>div:nth-child(3){
+  height: 30px;
+  line-height: 30px;
+}
+.legend>span{
+  float: right;
+  margin-top: -10px;
+}
+.redLine{
+  border-bottom: 3px solid red;
+  width: 50px;
+}
+.greenLine{
+  border-bottom: 3px solid rgb(0, 255, 0);
+  width: 50px;
+}
+
+.cover{
+  width: 100%;
+  height: 100%;
+  background-color: #fffff6;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cover img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
