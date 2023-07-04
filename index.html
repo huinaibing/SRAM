@@ -19,208 +19,74 @@
 <body>
   <div class="header">先行进位加法器</div>
   <div class="mian">
-    <!-- 逻辑门 -->
-    <!-- 八个异或门 已修改-->
-    <ul class="xorList">
-      <li class="xor basicGate">=1</li>
-      <li class="xor basicGate">=1</li>
-      <li class="xor basicGate">=1</li>
-      <li class="xor basicGate">=1</li>
-      <li class="xor basicGate">=1</li>
-      <li class="xor basicGate">=1</li>
-      <li class="xor basicGate">=1</li>
-      <li class="xor basicGate">=1</li>
+    <!-- SRAM存储单元 -->
+    <ul class="coreLists">
+      <li class="core00 coreList">存储单元</li>
+      <li class="core01 coreList">存储单元</li>
+      <li class="core02 coreList">存储单元</li>
+      <li class="core03 coreList">存储单元</li>
+      <li class="core10 coreList">存储单元</li>
+      <li class="core11 coreList">存储单元</li>
+      <li class="core12 coreList">存储单元</li>
+      <li class="core13 coreList">存储单元</li>
+      <li class="core20 coreList">存储单元</li>
+      <li class="core21 coreList">存储单元</li>
+      <li class="core22 coreList">存储单元</li>
+      <li class="core23 coreList">存储单元</li>
+      <li class="core30 coreList">存储单元</li>
+      <li class="core31 coreList">存储单元</li>
+      <li class="core32 coreList">存储单元</li>
+      <li class="core33 coreList">存储单元</li>
+    </ul>
+    <script>
+       function changeColor(button) {
+        if (button.style.backgroundColor == 'red') {
+          button.style.backgroundColor = 'green';
+        } else {
+          button.style.backgroundColor = 'red';
+        }
+      }
+    </script>
+    <ul class="select">
+      <button onclick="changeColor(this)" class="R0" type="button">R0</button>
+      <button onclick="changeColor(this)" class="R1" type="button">R1</button>
+      <button onclick="changeColor(this)" class="C0" type="button">C0</button>
+      <button onclick="changeColor(this)" class="C1" type="button">C1</button>
+      <button onclick="changeColor(this)" class="WE" type="button">WE</button>
+      <button onclick="changeColor(this)" class="Din" type="button">Din</button>
     </ul>
     <!-- 14个与门 已修改-->
     <ul class="andList">
-      <li class="and basicGate">&</li>
-      <li class="and basicGate">&</li>
-      <li class="and basicGate">&</li>
-      <li class="and basicGate">&</li>
-      <li class="and basicGate">&</li>
-      <li class="and basicGate">&</li>
-      <li class="and basicGate">&</li>
       
-      <li class="and basicGate">&</li>
-      <li class="and basicGate">&</li>
-      <li class="and basicGate">&</li>
-      <li class="and basicGate">&</li>
-      <li class="and basicGate">&</li>
-      <li class="and basicGate">&</li>
-      <li class="and basicGate">&</li>
     </ul>
     <!-- 四个或门 已修改-->
     <ul class="orList">
-      <li class="or basicGate">>=1</li>
-      <li class="or basicGate">>=1</li>
-      <li class="or basicGate">>=1</li>
-      <li class="or basicGate">>=1</li>
+      
     </ul>
     <!-- 导线 -->
     <!-- 输入a等状态线 -->
     <ul class="inputA">
-      <li class="a3">a3</li>
-      <li class="a3"><div class="dot"></div></li>
-      <li class="a2">a2</li>
-      <li class="a2"><div class="dot"></div></li>
-      <li class="a1">a1</li>
-      <li class="a1"><div class="dot"></div></li>
-      <li class="a0">a0</li>
-      <li class="a0"><div class="dot"></div></li>
+      
     </ul>
     <!-- 输入b等状态线 -->
     <ul class="inputB">
-      <li class="b3">b3</li>
-      <li class="b3"><div class="dot"></div></li>
-      <li class="b2">b2</li>
-      <li class="b2"><div class="dot"></div></li>
-      <li class="b1">b1</li>
-      <li class="b1"><div class="dot"></div></li>
-      <li class="b0">b0</li>
-      <li class="b0"><div class="dot"></div></li>
-    </ul>
-    <!-- 进位，带有placeholder的元素仅占位作用，不显示 -->
-    <ul class="carry">
-      <!-- <li class="c0">c0</li> -->
-      <li class="c0">c0</li>
-      <!-- <li class="c0 placeholder"></li> -->
-      <!-- <li class="c1">c1</li>
-      <li class="c1"></li> -->
-      <li class="c1"></li>
-      <!-- <li class="c2">c2</li>
-      <li class="c2"></li> -->
-      <li class="c2"></li>
-      <!-- <li class="c3">c3</li>
-      <li class="c3"></li> -->
-      <li class="c3"></li>
-      <li class="c4"></li>
-
-      <li class="c0"></li>
-      <li class="c0"></li>
-      <li class="c0"></li>
-      <li class="c0"></li>
-      <li class="c0"></li>
-      <li class="c0"></li>
-      <li class="c0"></li>
-    </ul>
-    <!-- 两类异或门输出线，下面4个异或门，上面4个
-      3号线是输出结果的异或门，补充线删除了
-    可能要补一个c0？ -->
-    <!--27个线
-      其中输出4根
-      剩下的都是P0~P3
-      output * 4
-      P0 * 6
-      P1 * 7
-      P2 * 6
-      P3 * 4
-      -->
-    <ul class="xorOut">
-      <li class="xor0">P0</li>
-      <li class="xor0">P0</li>
-      <li class="xor0">P0</li>
-      <li class="xor0">P0</li>
-      <li class="xor0">P0</li>
-      <li class="xor0">P0</li>
-
-      <li class="xor1">P1</li> <!--7-->
-      <li class="xor1">P1</li>
-      <li class="xor1">P1</li>
-      <li class="xor1">P1</li>
-      <li class="xor1">P1</li>
-      <li class="xor1">P1</li>
-      <li class="xor1">P1</li>
-
-      <li class="xor2">P2</li> <!--14-->
-      <li class="xor2">P2</li>
-      <li class="xor2">P2</li>
-      <li class="xor2">P2</li>
-      <li class="xor2">P2</li>
-      <li class="xor2">P2</li>
-
-      <li class="xor3">P3</li> <!--20-->
-      <li class="xor3">P3</li>
-      <li class="xor3">P3</li>
-      <li class="xor3">P3</li>
-
-      <li class="xor7">S3</li><!--24-->
-      <li class="xor6">S2</li>
-      <li class="xor5">S1</li>
-      <li class="xor4">S0</li> 
-
-      <li class="xor1">P1</li> <!--28 漏的一个-->
-
-      <li class="xor2">P2</li> <!--29 漏的一个-->
-
-      <li class="xor3">P3</li> <!--30 漏的一个-->
-
-      <li class="xor2">P2</li> <!--31 漏的一个 &-->
-      <li class="xor3">P3</li> <!--32 漏的一个 &-->
       
-      <li class="xor8 c1"></li> <!--G0旁边的异或门到s1-->
-      <li class="xor8 c1">c1</li> 
+    </ul>
+    
+    <ul class="carry">
+   
+  
+    </ul>
 
-      <li class="xor9 c2"></li><!-- G1->S2 -->
-      <li class="xor9 c2">c2</li>
-
-      <li class="xor10 c3"></li><!-- G2->S3 -->
-      <li class="xor10 c3">c3</li>
-
-
+    <ul class="xorOut">
+    
     </ul>
     <!-- 14个与门的输出 上面10个，下面4个-->
     <ul class="andOut">
-      <li class="and0">G0</li> <!--G0 * 5-->
-      <li class="and0">G0</li>
-      <li class="and0">G0</li>
-      <li class="and0">G0</li>
-      <li class="and0">G0</li>
-      
-      <li class="and1">G1</li> <!--6--> <!--G1 * 4-->
-      <li class="and1">G1</li>
-      <li class="and1">G1</li>
-      <li class="and1">G1</li>
-
-      <li class="and2">G2</li><!--10--> <!--G2-->
-      <li class="and2">G2</li>
-      <li class="and2">G2</li>
-
-      <li class="and3">G3</li> <!--13--> <!--g3-->
-      <li class="and3">G3</li>
-
       
     </ul>
     <ul class="andOutLT"> 
-      <!--for the line which need to be reversed-->
-      <li class="and4"></li> <!--1-->
-      <li class="and4"></li> <!--2-->
-
-      <li class="and5"></li> <!--3-->
-      <li class="and5"></li> <!--4-->
-
-      <li class="and6"></li> <!--5-->
-      <li class="and6"></li> <!--6-->
-
-      <li class="and7"></li> <!--7-->
-      <li class="and7"></li> <!--8-->
-
-      <li class="and8"></li> <!--9-->
-      <li class="and8"></li> <!--10-->
-
-      <li class="and9"></li> <!--11-->
-      <li class="and9"></li> <!--12-->
-
-      <li class="and10"></li> <!--13-->
-      <li class="and10"></li> <!--14-->
-
-      <li class="and11"></li> <!--15-->
-      <li class="and11"></li> <!--16-->
-
-      <li class="and12"></li> <!--17-->
-      <li class="and12"></li> <!--18-->
-
-      <li class="and13"></li> <!--19-->
-      <li class="and13"></li> <!--20-->
+   
     </ul>
 
   </div>
@@ -234,8 +100,9 @@
   </div>
   <!-- 图例 -->
   <div class="legend">
-    <div class="redLine"></div><span>0</span>
-    <div class="greenLine"></div><span>1</span>
+    <div class="greenLine"></div><span>0</span>
+    <div class="redLine"></div><span>1</span>
+    <div class="grayLine"></div><span>--</span>
     <!-- <div class="and basicGate">&</div>
     <div class="or basicGate">>=1</div>
     <div class="xor basicGate">=1</div> -->
