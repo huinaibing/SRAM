@@ -40,10 +40,7 @@ $(function () {
       }
     }
     // 开始执行RCA逻辑
-    // c0恒为0
-    $('.c0').css({
-      'border-color': 'red'
-    })
+    
     // 处理输入的数据
     // if (xor(a[i], b[i]) == '1') {
     //   $(`.xor${i}`).css({
@@ -119,119 +116,8 @@ $(function () {
         })
       }
     } // for 循环处理四个全加器
-    result = (parseInt(a[3] + a[2] + a[1] + a[0], 2) + parseInt(b[3] + b[2] + b[1] + b[0], 2)).toString(2);
-    
-    // 输出的截断
-    if (result.length > 4) {
-      $(`.c4`).css({
-        'border-color': 'rgb(0, 255, 0)'
-      })
-      result = result.substring(1)
-    }else{
-      set_color(0, "c4")
-    }
-
-    // 输出显示
-    for (i = 7; i >= 4; i--) {
-      if (result[7 - i] == '1') {
-        $(`.xor${i}`).css({
-          'border-color': 'rgb(0, 255, 0)'
-        })
-      }
-      else {
-        $(`.xor${i}`).css({
-          'border-color': 'red'
-        })
-      }
-    }
-
-    // pi
-    res_p = ''
-    for (i = 0; i < 4; i++) {
-      tmp = xor(a[i], b[i])
-      res_p += tmp.toString()
-      if (tmp == 1) {
-        $(`.xor${i}`).css({
-          'border-color': 'rgb(0, 255, 0)'
-        })
-      }
-      else{
-        $(`.xor${i}`).css({
-          'border-color': 'red'
-        })
-      }
-    }
+  
    
-    // end pi
-
-    //Gi
-    res_g = ''
-    for (i = 0; i < 4; i++) {
-      tmp = and(a[i], b[i])
-      res_g += tmp.toString()
-      if (tmp == 1) {
-        $(`.and${i}`).css({
-          'border-color': 'rgb(0, 255, 0)'
-        })
-      }
-      else{
-        $(`.and${i}`).css({
-          'border-color': 'red'
-        })
-      }
-    }
-   
-    //end gi
-
-
-
-    // 十个与门
-    
-    
-    res_and1 = and(res_g[2], res_p[3])
-    set_color(res_and1, "and4")
-    
-    res_and2 = and(and(res_g[1], res_p[3]), res_p[2])
-    set_color(res_and2, "and5")
-
-    res_and3 = and(and(res_g[0], res_p[3]), and(res_p[2], res_p[1]))
-    set_color(res_and3, "and6")
-
-    c0 = 0
-    res_and4 = and(and(and(res_p[3], res_p[2]), and(res_p[1], res_p[0])), c0)
-    set_color(res_and4, "and7")
-
-    res_and5 = and(res_g[1], res_p[2])
-    set_color(res_and5, "and8")
-
-    res_and6 = and(and(res_g[0], res_p[2]), res_p[1])
-    set_color(res_and6, "and9")
-
-    res_and7 = and(and(res_p[2], res_p[1]), and(res_p[0], c0))
-    set_color(res_and7, "and10")
-
-    res_and8 = and(res_g[0], res_p[1])
-    set_color(res_and8, "and11")
-
-    res_and9 = and(and(res_p[1], res_p[0]), c0)
-    set_color(res_and9, "and12")
-
-    res_and10 = and(c0, res_p[0])
-    set_color(res_and10, "and13")
-
-    // end
-
-    // ci
-    res_c1 = or(res_and10, res_g[0])
-    set_color(res_c1, "c1")
-
-    res_c2 = or(res_g[1], or(res_and8, res_and9))
-    set_color(res_c2, "c2")
-
-    res_c3 = or(or(res_g[2], res_and5), or(res_and6, res_and7))
-    set_color(res_c3, "c3")
-
-    //end ci
 
 
     $('.result>div').text(result)
@@ -329,85 +215,113 @@ $(function () {
     }
   }
 
-  
-  
-     
-  
-
-
-  
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  $(`.carry>li:nth-child(${7})`).css({
-    width: '170px',
-    height: '0px',
+  $(`.selector24_1`).css({
     top: '370px',
     left: '400px',
-  }) // c0 横着
-  $(`.carry>li:nth-child(${8})`).css({
-    width: '170px',
-    height: '0px',
-    top: '530px',
-    left: '400px',
-  }) // c0 倒数滴4个
-  $(`.carry>li:nth-child(${9})`).css({
-    width: '170px',
-    height: '0px',
-    top: '630px',
-    left: '400px',
-  }) // c0 倒数第二个
-
-  $(`.carry>li:nth-child(${10})`).css({
-    width: '0px',
-    height: '50px',
-    top: '680px',
-    left: '400px',
-  }) // c0 拐弯1
-  $(`.carry>li:nth-child(${11})`).css({
-    width: '470px',
-    height: '0px',
-    top: '730px',
-    left: '400px',
-  }) // c0 拐弯2
-  $(`.carry>li:nth-child(${12})`).css({
-    width: '0px',
-    height: '103px',
-    top: '630px',
-    left: '870px',
-  }) // c0 拐弯3  
-
-  // $(`.carry>li:nth-child(${2})`).css({
-  //   width: '0px',
-  //   height: '40px',
-  //   top: '492px',
-  //   left: '860px',
-  // }) // c1 
-
-  // $(`.carry>li:nth-child(${3})`).css({
-  //   width: '0px',
-  //   height: '40px',
-  //   top: '362px',
-  //   left: '860px',
-  // }) // c2
-  // $(`.carry>li:nth-child(${4})`).css({
-  //   width: '0px',
-  //   height: '40px',
-  //   top: '232px',
-  //   left: '860px',
-  // }) // c3
-
+  }) // 在左上角的24selector
   
+     
+  $(`.selector24_2`).css({
+    top: '700px',
+    left: '400px',
+  }) // 在左xia角的24selector
 
+
+  $(`.selector24_3`).css({
+    top: '700px',
+    left: '1400px',
+  }) // 在左xia角的24selector
+
+
+  for(i = 1; i <= 8; i+=2)
+  {
+    $(`.driver${i}`).css({
+      left: `${100 * i + 460}px`,
+      top: '800px',
+    }) 
+    $(`.driver${i + 1}`).css({
+      left: `${100 * i + 600}px`,
+      top: '800px',
+    }) 
+  }
+
+  for (i = 4; i <= 7; i++) {
+    $(`.inputDins li:nth-child(${i})`).css({
+      left: `${200 * i - 75}px`,
+      top: '860px',
+      height: '80px'
+    })
+  }
+
+  for (i = 2; i <= 5; i++) {
+    $(`.noOutputs li:nth-child(${i})`).css({
+      left: `${200 * i + 185}px`,
+      top: '860px',
+      height: '40px'
+    })
+  }
+
+  for(i = 1; i <= 10; i += 3)
+  {
+    $(`.selector24_1_outs li:nth-child(${i})`).css({
+        left: '460px',
+        top: `${360 + i * 10}px`,
+        width: '80px'
+    })
+    if(i == 1 || i == 10)
+    {
+      $(`.selector24_1_outs li:nth-child(${i})`).css({
+        left: '460px',
+        top: `${360 + i * 10}px`,
+        width: '60px'
+      })
+    }
+  }
+ 
+  $(`.no`).css({
+    position: 'absolute',
+    left: `460px`,
+    top: '870px',
+  })
+  $(`.R1`).css({
+    position: 'absolute',
+    left: `260px`,
+    top: '350px',
+  }) 
+  $(`.R0`).css({
+    position: 'absolute',
+    left: `260px`,
+    top: '420px',
+  }) 
+  $(`.C0`).css({
+    position: 'absolute',
+    left: `260px`,
+    top: '730px',
+  }) 
+  $(`.C1`).css({
+    position: 'absolute',
+    left: `260px`,
+    top: '660px',
+  }) 
+  $(`.WE`).css({
+    position: 'absolute',
+    left: `260px`,
+    top: '800px',
+  }) 
+  $(`.Din`).css({
+    position: 'absolute',
+    left: `260px`,
+    top: '870px',
+  }) 
+
+ 
 })
+
+
+function changeColor(button) {
+  if (button.style.backgroundColor == 'red') {
+    button.style.backgroundColor = 'green';
+  } else {
+    button.style.backgroundColor = 'red';
+  }
+}

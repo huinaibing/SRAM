@@ -4,6 +4,10 @@ html{
   height: 100%;
   overflow: hidden;
 }
+
+li {
+  position: absolute;
+}
 .zerolb{
   /* border: 2px solid red !important;
   border-right: 0px !important;
@@ -54,9 +58,8 @@ html{
   padding: 20px;
   width: 50px;
 }
-
-.coreList{
-  width: 120px;
+.selector24>li{
+  width: 60px;
   height: 100px;
   line-height: 32px;
   text-align: center;
@@ -66,42 +69,140 @@ html{
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #fff;
 }
-.xorList{
-  position: relative;
-}
-.xor{
-  border: 4px solid blue;
-}
-.and{
-  border: 4px solid blue;
-  /* border-radius: 0 20px 20px 0; */
-}
-.or{
-  border: 4px solid blue;
-  /* border-radius: 0 60% 60% 0; */
-}
-li {
+.no,
+.driverGate>li {
+  width: 60px;
+  height: 60px;
+  line-height: 32px;
+  text-align: center;
+  font-weight: 700;
   position: absolute;
+  border: 4px solid blue;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
 }
-.inputA li,
-.inputB li,
-.xorOut li{
-  border: 3px solid black;
+
+.selector24_1_outs>li,
+.noOutputs>li,
+.inputDins>li,
+.inputWEs>li,
+.inputR0,
+.inputR1,
+.inputC1s>li,
+.inputC0s>li {
+  border: 3px solid green;
   border-top: 0px;
   border-right: 0px;
 }
-.xorOut li{
-  border: 3px solid black;
-  border-top: 0px;
-  border-right: 0px;
+.inputR1 {
+  left: 300px;
+  top: 380px;
+  width: 100px;
+}
+.inputR0 {
+  left: 300px;
+  top: 450px;
+  width: 100px;
+}
+
+.inputC0s li:nth-child(1) {
+  left: 300px;
+  top: 770px;
+  width: 100px;
+}
+.inputC0s li:nth-child(2) {
+  left: 1440px;
+  top: 650px;
+  height: 50px;
+  width: 3px;
 }
 
 
-.andOut li{
-  border: 3px solid black;
-  border-bottom: 0px;
-  border-left: 0px;
+.inputC1s li:nth-child(1) {
+  left: 300px;
+  top: 700px;
+  width: 100px;
 }
+.inputC1s li:nth-child(2) {
+  left: 1415px;
+  top: 650px;
+  height: 50px;
+  width: 3px;
+}
+
+.inputWEs li:nth-child(1) {
+  left: 310px;
+  top: 830px;
+  width: 110px;
+}
+.inputWEs li:nth-child(2) {
+  left: 420px;
+  top: 800px;
+  height: 34px
+}
+
+.inputDins li:nth-child(1) {
+  left: 310px;
+  top: 900px;
+  width: 155px;
+}
+.inputDins li:nth-child(2) {
+  left: 420px;
+  top: 900px;
+  height: 40px
+}
+.inputDins li:nth-child(3) {
+  left: 420px;
+  top: 940px;
+  width: 910px;
+}
+
+.noOutputs li:nth-child(1) {
+  left: 520px;
+  top: 900px;
+  width: 670px;
+}
+
+.selector24_1_outs li:nth-child(3) {
+  left: 520px;
+  top: 200px;
+  width: 800px;
+}
+.selector24_1_outs li:nth-child(6) {
+  left: 540px;
+  top: 350px;
+  width: 780px;
+}
+.selector24_1_outs li:nth-child(9) {
+  left: 540px;
+  top: 500px;
+  width: 780px;
+}
+.selector24_1_outs li:nth-child(12) {
+  left: 520px;
+  top: 650px;
+  width: 800px;
+}
+
+
+.coreList{
+  width: 120px;
+  height: 100px;
+  line-height: 32px;
+  text-align: center;
+  font-weight: 700;
+  position: absolute;
+  border: 4px solid blue;
+  color: white;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: green;
+}
+
+
+
+
+
+
 
 
 

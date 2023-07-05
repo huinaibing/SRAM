@@ -38,15 +38,45 @@
       <li class="core32 coreList">存储单元</li>
       <li class="core33 coreList">存储单元</li>
     </ul>
-    <script>
-       function changeColor(button) {
-        if (button.style.backgroundColor == 'red') {
-          button.style.backgroundColor = 'green';
-        } else {
-          button.style.backgroundColor = 'red';
-        }
-      }
-    </script>
+
+    <ul class="selector24">
+      <li class="selector24_1">2-4选择器</li>
+      <li class="selector24_2">2-4选择器</li>
+      <li class="selector24_3">4路选择器</li>
+    </ul>
+
+    <ul class="driverGate">
+      <li class="driver1">传输门</li>
+      <li class="driver2">传输门</li>
+      <li class="driver3">传输门</li>
+      <li class="driver4">传输门</li>
+      <li class="driver5">传输门</li>
+      <li class="driver6">传输门</li>
+      <li class="driver7">传输门</li>
+      <li class="driver8">传输门</li>
+    </ul>
+    
+    <li class="no">!</li>
+
+    <ul class="selector24_1_outs">
+      <li class="selector24_1_00"></li>
+      <li class="selector24_1_00"></li>
+      <li class="selector24_1_00"></li>
+
+      <li class="selector24_1_01"></li>
+      <li class="selector24_1_01"></li>
+      <li class="selector24_1_01"></li>
+
+      <li class="selector24_1_10"></li>
+      <li class="selector24_1_10"></li>
+      <li class="selector24_1_10"></li>
+
+      <li class="selector24_1_11"></li>
+      <li class="selector24_1_11"></li>
+      <li class="selector24_1_11"></li>
+    </ul>
+     
+   
     <ul class="select">
       <button onclick="changeColor(this)" class="R0" type="button">R0</button>
       <button onclick="changeColor(this)" class="R1" type="button">R1</button>
@@ -55,54 +85,61 @@
       <button onclick="changeColor(this)" class="WE" type="button">WE</button>
       <button onclick="changeColor(this)" class="Din" type="button">Din</button>
     </ul>
-    <!-- 14个与门 已修改-->
-    <ul class="andList">
-      
-    </ul>
-    <!-- 四个或门 已修改-->
-    <ul class="orList">
-      
-    </ul>
-    <!-- 导线 -->
-    <!-- 输入a等状态线 -->
-    <ul class="inputA">
-      
-    </ul>
-    <!-- 输入b等状态线 -->
-    <ul class="inputB">
-      
-    </ul>
     
-    <ul class="carry">
    
-  
+    
+    <li class="inputR1"></li>
+    <li class="inputR0"></li>
+    
+    <ul class="inputC0s">
+      <li class="inputC0"></li>
+      <li class="inputC0">C0</li>
     </ul>
 
-    <ul class="xorOut">
-    
+    <ul class="inputC1s">
+      <li class="inputC1"></li>
+      <li class="inputC1">C1</li>
     </ul>
-    <!-- 14个与门的输出 上面10个，下面4个-->
-    <ul class="andOut">
-      
+
+    <ul class="inputWEs">
+      <li class="inputWE"></li>
+      <li class="inputWE"></li>
     </ul>
-    <ul class="andOutLT"> 
-   
+
+    <ul class="inputDins">
+      <li class="inputDin"></li>
+      <li class="inputDin"></li>
+      <li class="inputDin"></li>
+      <li class="inputDin"></li>
+      <li class="inputDin"></li>
+      <li class="inputDin"></li>
+      <li class="inputDin"></li>
     </ul>
+
+    <ul class="noOutputs">
+      <li class="noOutput"></li>
+      <li class="noOutput"></li>
+      <li class="noOutput"></li>
+      <li class="noOutput"></li>
+      <li class="noOutput"></li>
+    </ul>
+
+
 
   </div>
   <!-- 控制台 -->
-  <div class="console">
+  <!-- <div class="console">
     <div class="operand1">操作数1：<input type="text" class="hvr-shadow" required></div>
     <div class="operand2">操作数2：<input type="text" class="hvr-shadow" required></div>
     <div class="result">运算结果：<div></div></div>
     <div class="run hvr-grow-shadow">运行</div>
     <div class="reset hvr-grow-shadow">重置</div>
-  </div>
+  </div> -->
   <!-- 图例 -->
   <div class="legend">
     <div class="greenLine"></div><span>0</span>
     <div class="redLine"></div><span>1</span>
-    <div class="grayLine"></div><span>--</span>
+    <div class="grayLine"></div><span>Z</span>
     <!-- <div class="and basicGate">&</div>
     <div class="or basicGate">>=1</div>
     <div class="xor basicGate">=1</div> -->
