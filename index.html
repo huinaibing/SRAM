@@ -13,6 +13,7 @@
 
   <script src="./node_modules/jquery/dist/jquery.min.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/logic.js"></script>
 
   <link rel="shortcut icon" href="favicon.png">
 </head>
@@ -101,27 +102,26 @@
     </ul>
 
     <ul class="selector24_2_outs">
-      <li class="selector24_2_out_00">00</li>
-      <li class="selector24_2_out_00">00</li>
+      <li class="selector24_2_00">00</li>
+      <li class="selector24_2_00">00</li>
 
-      <li class="selector24_2_out_01">01</li>
-      <li class="selector24_2_out_01">01</li>
+      <li class="selector24_2_01">01</li>
+      <li class="selector24_2_01">01</li>
 
-      <li class="selector24_2_out_10">10</li>
-      <li class="selector24_2_out_10">10</li>
+      <li class="selector24_2_10">10</li>
+      <li class="selector24_2_10">10</li>
 
-      <li class="selector24_2_out_11">11</li>
-      <li class="selector24_2_out_11">11</li>
+      <li class="selector24_2_11">11</li>
+      <li class="selector24_2_11">11</li>
     </ul>
-     
-   
+
     <ul class="select">
-      <button onclick="changeColor(this)" class="R0" type="button">R0</button>
-      <button onclick="changeColor(this)" class="R1" type="button">R1</button>
-      <button onclick="changeColor(this)" class="C0" type="button">C0</button>
-      <button onclick="changeColor(this)" class="C1" type="button">C1</button>
-      <button onclick="changeColor(this)" class="WE" type="button">WE</button>
-      <button onclick="changeColor(this)" class="Din" type="button">Din</button>
+      <button onclick="whileclick('R0')" class="R0" type="button">R0</button>
+      <button onclick="whileclick('R1')" class="R1" type="button">R1</button>
+      <button onclick="whileclick('C0')" class="C0" type="button">C0</button>
+      <button onclick="whileclick('C1')" class="C1" type="button">C1</button>
+      <button onclick="whileclick('WE')" class="WE" type="button">WE</button>
+      <button onclick="whileclick('Din')" class="Din" type="button">Din</button>
     </ul>
     
    
@@ -163,7 +163,9 @@
     </ul>
 
 
-
+  <script>
+    whileclick('0')
+  </script>
   </div>
   <!-- 控制台 -->
   <!-- <div class="console">
