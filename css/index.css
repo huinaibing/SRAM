@@ -82,6 +82,9 @@ li {
   background-color: #fff;
 }
 
+.out,
+.selector24_2_outs>li,
+.driverOuts>li,
 .selector24_1_outs>li,
 .noOutputs>li,
 .inputDins>li,
@@ -111,7 +114,7 @@ li {
   width: 100px;
 }
 .inputC0s li:nth-child(2) {
-  left: 1440px;
+  left: 1540px;
   top: 650px;
   height: 50px;
   width: 3px;
@@ -124,7 +127,7 @@ li {
   width: 100px;
 }
 .inputC1s li:nth-child(2) {
-  left: 1415px;
+  left: 1515px;
   top: 650px;
   height: 50px;
   width: 3px;
@@ -184,6 +187,78 @@ li {
   width: 800px;
 }
 
+.selector24_1_outs li:nth-child(2) {
+  left: 520px;
+  top: 200px;
+  height: 173px;
+}
+
+.selector24_1_outs li:nth-child(5) {
+  left: 540px;
+  top: 350px;
+  height: 53px;
+}
+
+.selector24_1_outs li:nth-child(8) {
+  left: 540px;
+  top: 430px;
+  height: 70px;
+}
+
+.selector24_1_outs li:nth-child(11) {
+  left: 520px;
+  top: 460px;
+  height: 190px;
+}
+
+
+.driverOuts li:nth-child(1) {
+  left: 600px;
+  top: 100px;
+  height: 700px;
+}
+
+.driverOuts li:nth-child(2) {
+  left: 720px;
+  top: 100px;
+  height: 700px;
+}
+
+.driverOuts li:nth-child(3) {
+  left: 800px;
+  top: 100px;
+  height: 700px;
+}
+
+.driverOuts li:nth-child(4) {
+  left: 920px;
+  top: 100px;
+  height: 700px;
+}
+
+.driverOuts li:nth-child(5) {
+  left: 1000px;
+  top: 100px;
+  height: 700px;
+}
+
+.driverOuts li:nth-child(6) {
+  left: 1120px;
+  top: 100px;
+  height: 700px;
+}
+
+.driverOuts li:nth-child(7) {
+  left: 1200px;
+  top: 100px;
+  height: 700px;
+}
+
+.driverOuts li:nth-child(8) {
+  left: 1320px;
+  top: 100px;
+  height: 700px;
+}
 
 .coreList{
   width: 120px;
@@ -198,7 +273,11 @@ li {
   background-color: green;
 }
 
-
+.out {
+  left: 1560px;
+  top: 750px;
+  height: 3px;
+}
 
 
 

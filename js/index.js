@@ -229,7 +229,7 @@ $(function () {
 
   $(`.selector24_3`).css({
     top: '700px',
-    left: '1400px',
+    left: '1500px',
   }) // 在左xia角的24selector
 
 
@@ -278,6 +278,46 @@ $(function () {
     }
   }
  
+  for(i = 1; i <= 7; i +=2)
+  {
+    $(`.selector24_2_outs li:nth-child(${i})`).css({
+      left: '460px',
+      top: `${690 + i * 15}px`,
+      width: '60px',
+      height: '3px'
+    })
+  }
+
+  for(i = 2; i <= 8; i +=2)
+  {
+    $(`.selector24_2_outs li:nth-child(${i})`).css({
+      top: '830px',
+      left: `${420 + i * 100}px`,
+      width: '80px',
+      height: '3px'
+    })
+  }
+
+  for(i = 9; i <= 15; i +=2)
+  {
+    $(`.driverOuts li:nth-child(${i})`).css({
+      top: '730px',
+      left: `${i * 100 - 180}px`,
+      width: '50px',
+      height: '3px'
+    })
+  }
+
+  for(i = 10; i <= 16; i +=2)
+  {
+    $(`.driverOuts li:nth-child(${i})`).css({
+      left: '1450px',
+      top: `${i * 15 + 555}px`,
+      width: '50px',
+      height: '3px'
+    })
+  }
+
   $(`.no`).css({
     position: 'absolute',
     left: `460px`,
